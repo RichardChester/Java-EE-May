@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Account {
@@ -13,6 +14,7 @@ public class Account {
 	private Long id;
 	private String firstName;
 	private String secondName;
+	@Size(min = 6, max = 6)
 	private String accountNumber;
 
 	public Account() {
